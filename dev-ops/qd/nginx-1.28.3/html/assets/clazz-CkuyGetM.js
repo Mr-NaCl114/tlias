@@ -1,0 +1,1 @@
+import{r as z}from"./request-DqSxpkBx.js";const t=a=>z.get("/clazzs",{params:a}),e=a=>z.get(`/clazzs/${a}`),l=a=>z.post("/clazzs",a),c=a=>z.put("/clazzs",a),o=a=>z.delete("/clazzs",{params:{id:a}});export{l as a,o as d,e as g,t as p,c as u};
