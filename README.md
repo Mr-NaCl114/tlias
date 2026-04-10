@@ -1,7 +1,5 @@
 # TLiAS Random 文档（前端已打包到 Nginx）
 
-这是一份给联调和运维同学的快速说明。
-当前前端静态资源已经打包，运行在 Nginx 容器里，后端为 Spring Boot 容器。
 
 ## 1. 现状说明
 
@@ -83,9 +81,4 @@ docker compose down
 - 登录接口路径与后端控制器一致
 - 登录后 token 正常透传
 
----
 
-如需我再补一版：
-- `README-部署.md`（给运维）
-- `README-前后端联调.md`（给开发）
-- 含 curl/Postman 示例的接口自测文档
