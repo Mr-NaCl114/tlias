@@ -8,6 +8,7 @@
 - 前端访问端口：`18080`（宿主机）-> `80`（Nginx 容器）
 - 后端访问端口：`18081`（宿主机）-> `8080`（Spring Boot 容器）
 - 前端目录挂载：`./qd/dist:/usr/share/nginx/html:ro`
+- 可以直接将nginx-1.28.3跑起来，将代码拉取到本地，运行nginx.exe文件就能跑起来
 
 来源：`dev-ops/docker-compose.yml`
 
