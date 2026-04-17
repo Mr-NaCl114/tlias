@@ -1,7 +1,7 @@
 package cn.qdd.tlias.mapper;
 
-import cn.qdd.tlias.pojo.Student;
-import cn.qdd.tlias.pojo.StudentQueryParam;
+import cn.qdd.tlias.pojo.entity.Student;
+import cn.qdd.tlias.pojo.query.StudentQueryParam;
 import org.apache.ibatis.annotations.MapKey;
 import org.apache.ibatis.annotations.Mapper;
 

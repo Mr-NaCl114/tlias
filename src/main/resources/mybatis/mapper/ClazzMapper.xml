@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.qdd.tlias.mapper.ClazzMapper">
 
-    <select id="list" resultType="cn.qdd.tlias.pojo.Clazz">
+    <select id="list" resultType="cn.qdd.tlias.pojo.entity.Clazz">
         select c.*,
                e.name as master_name,
                case
@@ -31,7 +31,7 @@
         order by c.id desc
     </select>
 
-    <select id="getById" resultType="cn.qdd.tlias.pojo.Clazz">
+    <select id="getById" resultType="cn.qdd.tlias.pojo.entity.Clazz">
         select c.*,
                e.name as master_name,
                case

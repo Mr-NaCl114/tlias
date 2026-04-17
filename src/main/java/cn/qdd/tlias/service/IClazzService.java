@@ -1,8 +1,8 @@
 package cn.qdd.tlias.service;
 
-import cn.qdd.tlias.pojo.Clazz;
-import cn.qdd.tlias.pojo.ClazzQueryParam;
-import cn.qdd.tlias.pojo.PageResult;
+import cn.qdd.tlias.pojo.entity.Clazz;
+import cn.qdd.tlias.pojo.query.ClazzQueryParam;
+import cn.qdd.tlias.pojo.vo.PageResult;
 
 public interface IClazzService {
     PageResult page(ClazzQueryParam clazzQueryParam);

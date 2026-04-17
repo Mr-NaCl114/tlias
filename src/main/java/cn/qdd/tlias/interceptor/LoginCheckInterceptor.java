@@ -1,6 +1,6 @@
 package cn.qdd.tlias.interceptor;
 
-import cn.qdd.tlias.pojo.Result;
+import cn.qdd.tlias.pojo.vo.Result;
 import cn.qdd.tlias.utils.JwtUtils;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.http.HttpServletRequest;

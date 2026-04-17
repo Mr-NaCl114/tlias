@@ -5,11 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @Author: qdd
- * @Description: OssConfiguration
- * @DateTime: 2026/3/28 16:06
- **/
 @Configuration
 @Slf4j
 public class OssConfiguration {

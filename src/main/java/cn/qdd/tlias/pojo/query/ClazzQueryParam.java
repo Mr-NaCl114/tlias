@@ -1,10 +1,7 @@
-package cn.qdd.tlias.pojo;
+package cn.qdd.tlias.pojo.query;
 
 import lombok.Data;
 
-/**
- * 班级分页查询参数
- */
 @Data
 public class ClazzQueryParam {
     private Integer page = 1;
