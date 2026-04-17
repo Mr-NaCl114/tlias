@@ -1,22 +1,13 @@
-package cn.qdd.tlias.pojo;
-
-/**
- * @Author: qdd
- * @Description: Result
- * @DateTime: 2026/3/28 11:22
- **/
+package cn.qdd.tlias.pojo.vo;
 
 import lombok.Data;
 
-/**
- * 后端统一返回结果
- */
 @Data
 public class Result {
 
-    private Integer code; //编码：1成功，0为失败
-    private String msg; //错误信息
-    private Object data; //数据
+    private Integer code;
+    private String msg;
+    private Object data;
 
     public static Result success() {
         Result result = new Result();

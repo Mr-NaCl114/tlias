@@ -1,9 +1,9 @@
 package cn.qdd.tlias.controller;
 
-import cn.qdd.tlias.pojo.Clazz;
-import cn.qdd.tlias.pojo.ClazzQueryParam;
-import cn.qdd.tlias.pojo.PageResult;
-import cn.qdd.tlias.pojo.Result;
+import cn.qdd.tlias.pojo.entity.Clazz;
+import cn.qdd.tlias.pojo.query.ClazzQueryParam;
+import cn.qdd.tlias.pojo.vo.PageResult;
+import cn.qdd.tlias.pojo.vo.Result;
 import cn.qdd.tlias.service.IClazzService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

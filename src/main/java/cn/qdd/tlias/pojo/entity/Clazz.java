@@ -1,22 +1,26 @@
-package cn.qdd.tlias.pojo;
+package cn.qdd.tlias.pojo.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-/**
- * @Author: qdd
- * @Description: Dept
- * @DateTime: 2026/3/28 11:21
- **/
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Dept {
+public class Clazz {
     private Integer id;
     private String name;
+    private String room;
+    private LocalDate beginDate;
+    private LocalDate endDate;
+    private Integer masterId;
+    private Integer subject;
     private LocalDateTime createTime;
     private LocalDateTime updateTime;
+
+    private String masterName;
+    private String status;
 }

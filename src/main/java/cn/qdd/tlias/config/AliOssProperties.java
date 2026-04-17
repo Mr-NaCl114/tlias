@@ -8,11 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
 
-/**
- * @Author: qdd
- * @Description: OssConfiguration
- * @DateTime: 2026/3/28 16:04
- **/
 @Component
 @ConfigurationProperties(prefix = "alioss")
 @Data

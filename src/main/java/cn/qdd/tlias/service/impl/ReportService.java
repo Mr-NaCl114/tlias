@@ -2,8 +2,8 @@ package cn.qdd.tlias.service.impl;
 
 import cn.qdd.tlias.mapper.EmpMapper;
 import cn.qdd.tlias.mapper.StudentMapper;
-import cn.qdd.tlias.pojo.JobOption;
-import cn.qdd.tlias.pojo.StudentCountOption;
+import cn.qdd.tlias.pojo.vo.JobOption;
+import cn.qdd.tlias.pojo.vo.StudentCountOption;
 import cn.qdd.tlias.service.IReportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,11 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @Author: qdd
- * @Description: ReportService
- * @DateTime: 2026/3/28 16:36
- **/
 @Service
 public class ReportService implements IReportService {
 
