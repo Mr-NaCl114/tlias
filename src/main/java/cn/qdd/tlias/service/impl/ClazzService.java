@@ -1,9 +1,9 @@
 package cn.qdd.tlias.service.impl;
 
 import cn.qdd.tlias.mapper.ClazzMapper;
-import cn.qdd.tlias.pojo.Clazz;
-import cn.qdd.tlias.pojo.ClazzQueryParam;
-import cn.qdd.tlias.pojo.PageResult;
+import cn.qdd.tlias.pojo.entity.Clazz;
+import cn.qdd.tlias.pojo.query.ClazzQueryParam;
+import cn.qdd.tlias.pojo.vo.PageResult;
 import cn.qdd.tlias.service.IClazzService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;

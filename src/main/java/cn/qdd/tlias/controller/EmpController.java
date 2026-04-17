@@ -1,9 +1,9 @@
 package cn.qdd.tlias.controller;
 
-import cn.qdd.tlias.pojo.Emp;
-import cn.qdd.tlias.pojo.EmpQueryParam;
-import cn.qdd.tlias.pojo.PageResult;
-import cn.qdd.tlias.pojo.Result;
+import cn.qdd.tlias.pojo.entity.Emp;
+import cn.qdd.tlias.pojo.query.EmpQueryParam;
+import cn.qdd.tlias.pojo.vo.PageResult;
+import cn.qdd.tlias.pojo.vo.Result;
 import cn.qdd.tlias.service.IEmpService;
 import cn.qdd.tlias.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -15,16 +15,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @Author: qdd
- * @Description: EmpController
- * @DateTime: 2026/3/28 14:36
- **/
 @Slf4j
 @RequestMapping("/emps")
 @RestController
 public class EmpController {
-
 
     @Autowired
     private IEmpService empService;
@@ -51,9 +45,6 @@ public class EmpController {
         return Result.success(pageResult);
     }
 
-    /**
-     * 添加员工
-     */
     @PostMapping
     public Result save(@RequestBody Emp emp){
         log.info("请求参数emp: {}", emp);
@@ -61,9 +52,6 @@ public class EmpController {
         return Result.success(emp.getId());
     }
 
-    /**
-     * 批量删除员工
-     */
     @DeleteMapping
     public Result delete(@RequestParam List<Integer> ids){
         log.info("批量删除部门: ids={} ", ids);
@@ -71,18 +59,13 @@ public class EmpController {
         return Result.success();
     }
 
-    /**
-     * 查询回显
-     */
     @GetMapping("/{id}")
     public Result getInfo(@PathVariable Integer id){
         log.info("根据id查询员工的详细信息");
         Emp emp  = empService.getInfo(id);
         return Result.success(emp);
     }
-    /**
-     * 更新员工信息
-     */
+
     @PutMapping
     public Result update(@RequestBody Emp emp){
         log.info("修改员工信息, {}", emp);

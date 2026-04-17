@@ -4,14 +4,14 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.qdd.tlias.mapper.EmpMapper">
 
-    <select id="login" resultType="cn.qdd.tlias.pojo.Emp">
+    <select id="login" resultType="cn.qdd.tlias.pojo.entity.Emp">
         select *
         from emp
         where username = #{username}
           and password = #{password}
     </select>
 
-    <resultMap id="empResultMap" type="cn.qdd.tlias.pojo.Emp">
+    <resultMap id="empResultMap" type="cn.qdd.tlias.pojo.entity.Emp">
         <id column="id" property="id" />
         <result column="username" property="username" />
         <result column="password" property="password" />
@@ -26,8 +26,7 @@
         <result column="create_time" property="createTime" />
         <result column="update_time" property="updateTime" />
 
-        <!--封装exprList-->
-        <collection property="exprList" ofType="cn.qdd.tlias.pojo.EmpExpr">
+        <collection property="exprList" ofType="cn.qdd.tlias.pojo.entity.EmpExpr">
             <id column="ee_id" property="id"/>
             <result column="ee_company" property="company"/>
             <result column="ee_job" property="job"/>
@@ -46,7 +45,6 @@
                  )
     </insert>
 
-    <!--根据ID更新员工信息-->
     <update id="updateById">
         update emp
         <set>
@@ -65,8 +63,6 @@
         where id = #{id}
     </update>
 
-
-    <!-- 统计员工的性别信息 -->
     <select id="countEmpGenderData" resultType="java.util.Map">
         select
             if(gender = 1, '男', '女') as name,
@@ -74,7 +70,6 @@
         from emp group by gender ;
     </select>
 
-    <!-- 统计各个职位的员工人数 -->
     <select id="countEmpJobData" resultType="java.util.Map">
         select
             (case job when 1 then '班主任'
@@ -95,8 +90,7 @@
         </foreach>
     </delete>
 
-
-    <select id="list" resultType="cn.qdd.tlias.pojo.Emp">
+    <select id="list" resultType="cn.qdd.tlias.pojo.entity.Emp">
         select e.*, d.name deptName from emp as e left join dept as d on e.dept_id = d.id
         <where>
             <if test="name != null and name != ''">
@@ -111,7 +105,6 @@
         </where>
     </select>
 
-    <!--根据ID查询员工的详细信息-->
     <select id="getById" resultMap="empResultMap">
         select e.*,
                ee.id ee_id,

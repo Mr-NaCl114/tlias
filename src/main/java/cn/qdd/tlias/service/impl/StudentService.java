@@ -1,9 +1,9 @@
 package cn.qdd.tlias.service.impl;
 
 import cn.qdd.tlias.mapper.StudentMapper;
-import cn.qdd.tlias.pojo.PageResult;
-import cn.qdd.tlias.pojo.Student;
-import cn.qdd.tlias.pojo.StudentQueryParam;
+import cn.qdd.tlias.pojo.vo.PageResult;
+import cn.qdd.tlias.pojo.entity.Student;
+import cn.qdd.tlias.pojo.query.StudentQueryParam;
 import cn.qdd.tlias.service.IStudentService;
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;

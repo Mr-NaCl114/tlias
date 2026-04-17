@@ -1,13 +1,10 @@
-package cn.qdd.tlias.pojo;
+package cn.qdd.tlias.pojo.query;
 
 import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
-/**
- * 学员分页查询参数
- */
 @Data
 public class StudentQueryParam {
     private Integer page = 1;

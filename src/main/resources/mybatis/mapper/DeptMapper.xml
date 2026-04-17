@@ -20,12 +20,11 @@
         select count(*) from emp where dept_id = #{deptId}
     </select>
 
-    <select id="findAll" resultType="cn.qdd.tlias.pojo.Dept">
+    <select id="findAll" resultType="cn.qdd.tlias.pojo.entity.Dept">
         select * from dept
     </select>
-    <select id="getById" resultType="cn.qdd.tlias.pojo.Dept">
+    <select id="getById" resultType="cn.qdd.tlias.pojo.entity.Dept">
         select * from dept where id=#{id}
     </select>
-
 
 </mapper>

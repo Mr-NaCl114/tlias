@@ -4,20 +4,15 @@ spring:
     url: jdbc:mysql://127.0.0.1:3306/tlias?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
     username: root
     password: 123456
-#  data:
-#    redis:
-#      host: 127.0.0.1
-#      port: 6379
 
-#阿里云OSS
-alioss:
-  endpoint:
-  access-key-id:
-  access-key-secret:
-  bucket-name:
-
+tencent:
+  cos:
+    secret-id:
+    secret-key:
+    region:
+    bucket-name:
 
 mybatis:
   configuration:
-    map-underscore-to-camel-case: true #?????????????????
+    map-underscore-to-camel-case: true
   mapper-locations: classpath:/mybatis/mapper/*.xml

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="cn.qdd.tlias.mapper.StudentMapper">
 
-    <select id="list" resultType="cn.qdd.tlias.pojo.Student">
+    <select id="list" resultType="cn.qdd.tlias.pojo.entity.Student">
         select s.*,
                c.name as clazz_name
         from student s
@@ -32,7 +32,7 @@
         order by s.id desc
     </select>
 
-    <select id="getById" resultType="cn.qdd.tlias.pojo.Student">
+    <select id="getById" resultType="cn.qdd.tlias.pojo.entity.Student">
         select s.*,
                c.name as clazz_name
         from student s
@@ -69,7 +69,6 @@
         delete from student where id = #{id}
     </delete>
 
-    <!-- 统计各班级学员人数(包含0人班级) -->
     <select id="countStudentByClazz" resultType="java.util.Map">
         select c.name as clazzName,
                count(s.id) as total
@@ -79,7 +78,6 @@
         order by c.id
     </select>
 
-    <!-- 统计学员学历信息 -->
     <select id="countStudentDegreeData" resultType="java.util.Map">
         select case s.degree
                    when 1 then '初中'

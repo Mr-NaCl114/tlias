@@ -1,7 +1,7 @@
 package cn.qdd.tlias.mapper;
 
-import cn.qdd.tlias.pojo.Clazz;
-import cn.qdd.tlias.pojo.ClazzQueryParam;
+import cn.qdd.tlias.pojo.entity.Clazz;
+import cn.qdd.tlias.pojo.query.ClazzQueryParam;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
